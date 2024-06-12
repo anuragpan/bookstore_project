@@ -1,0 +1,44 @@
+---goto dir where you want to create project.
+
+django-admin startproject <mysite>
+---then go to the <mysite> dir as cd <mysite>
+
+python manage.py startapp <polls>
+---startapp polls will create dir polls with various fills needed for it.
+---then create urls.py in polls folder (i.e. /polls/urls.py)
+---create folder templates inside polls again (i.e. /polls/templates/polls/) where our html will land.
+
+python manage.py runserver
+---go to 127.0.0.1:8000 whenever wants to see webpages
+
+python manage.py migrate
+---after update the settings.py.
+
+---update the models.py in polls folder.
+python manage.py makemigrations <polls>
+---this will create the table of our DB.
+
+python manage.py migrate <polls>
+
+python manage.py sqlmigrate <polls> 0001   #optional
+---to see what kind of data you have created in DB.
+
+python manage.py shell #optional
+---to use database api.
+
+python manage.py createsuperuser #creare Django admin
+python manage.py test <polls>   #testing of apps
+
+---------------PostgreSql-------------------------
+sudo -i -u postgres    //to  switch to the new "postgres" account.
+createuser <matt> -P --interactive //create roles
+createdb <testpython>   //run after exiting the pgs account.
+psql testpython          //
+
+--------------------docker-----------------------------
+touch Dockerfile
+touch docker-compose.yml
+docker-compose up -d --build  // '--build' for Dockerfile 
+docker-compose up -d//run container
+docker-compose down
+docker-compose exec web *  // you caan run only when you have container running.

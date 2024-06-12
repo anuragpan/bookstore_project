@@ -1,0 +1,5 @@
+1.django is on the way i.e. update files and see updated pages
+2. template_name in views.py will look into templates/ 
+3. we cwn use either 'object' or lowercase of our model name.(eg post)
+4. every test function start with test_*.
+5. models tests apps admin files not present in project_level.
