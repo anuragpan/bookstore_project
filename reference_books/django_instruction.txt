@@ -44,6 +44,7 @@ docker-compose down
 docker-compose exec web *  // you caan run only when you have container running.
 
 ----------END----------
+this is initial line for testing purpose
 this is first line for testing purpose
 this is third line for testing purpose
 this is fifth line for testing purpose
